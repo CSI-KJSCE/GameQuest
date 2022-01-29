@@ -66,22 +66,22 @@ def draw_window(demon, cowboy, demon_bullets, cowboy_bullets, demon_health, cowb
 def handle_cowboy_movement(keys_pressed, cowboy):
     if keys_pressed[pygame.K_a] and cowboy.x - VEL > 0:  # LEFT
         cowboy.x -= VEL
-    if keys_pressed[pygame.K_d] and cowboy.x + VEL + cowboy.width - 30 < BORDER.x:  # RIGHT
+    if keys_pressed[pygame.K_d] and cowboy.x + VEL + cowboy.width < BORDER.x:  # RIGHT
         cowboy.x += VEL
     if keys_pressed[pygame.K_w] and cowboy.y - VEL > 0:  # UP
         cowboy.y -= VEL
-    if keys_pressed[pygame.K_s] and cowboy.y + VEL + cowboy.height -30 < HEIGHT :  # DOWN
+    if keys_pressed[pygame.K_s] and cowboy.y + VEL + cowboy.height< HEIGHT :  # DOWN
         cowboy.y += VEL
 
 
 def handle_demon_movement(keys_pressed, demon):
     if keys_pressed[pygame.K_LEFT] and demon.x - VEL > BORDER.x + BORDER.width:  # LEFT
         demon.x -= VEL
-    if keys_pressed[pygame.K_RIGHT] and demon.x + VEL + demon.width + 30 < WIDTH:  # RIGHT
+    if keys_pressed[pygame.K_RIGHT] and demon.x + VEL + demon.width< WIDTH:  # RIGHT
         demon.x += VEL
     if keys_pressed[pygame.K_UP] and demon.y - VEL > 0:  # UP
         demon.y -= VEL
-    if keys_pressed[pygame.K_DOWN] and demon.y + VEL + demon.height + 30 < HEIGHT:  # DOWN
+    if keys_pressed[pygame.K_DOWN] and demon.y + VEL + demon.height< HEIGHT:  # DOWN
         demon.y += VEL
 
 
